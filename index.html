@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculadora</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="icon" href="imagens/icone_aba.png">
+	</head>
+	<body>
+		<div id="container">
+			<div id="feito-por">Desenvolvido por <span id="nome">Derick</span></div>
+			<div id="calculadora">
+
+				<div id="barra-cima">
+
+					<span id="horario"></span>
+					<span id="icones-lado-esquerdo">
+						<img style="margin-top: 2px;" src="imagens/wpp.png" width="21px">
+						<img style="margin-bottom: 2px;" src="imagens/insta.png" width="17px">
+					</span>
+
+					<span id="icones-lado-direito">
+						<img style="margin-bottom: 1px;" src="imagens/relogio.png" width="16px">
+						<img style="margin-bottom: 1px; margin-left: 4px" src="imagens/wifi.png" width="20px">
+						<img style="margin-bottom: 1px;" src="imagens/sinal.jpg" width="20px">
+						<img style="margin-left: 2px; margin-top: 1px;" src="imagens/bateria.png" width="20px">
+					</span>
+
+				</div>
+
+				<div id="parte-cima">
+					<div id="espaco">
+						<div id="calculoCompleto"></div>
+						<div id="calculo"></div>
+					</div>
+					<input id="resultado" type="text" placeholder="0" disabled>
+					<span id="barra-baixo"></span>
+				</div>
+
+				<div id="parte-baixo">
+
+					<div class="linha">
+						<button onclick="apagar('C')" class="botoes-laranjas">C</button>
+						<button onclick="apagar('CE')" class="botoes-laranjas">CE</button>
+						<button onclick="conferirOperacao('%', document.getElementById('resultado').value)" class="botoes-laranjas">%</button>
+						<button onclick="conferirOperacao('/', document.getElementById('resultado').value)" class="botoes-laranjas">/</button>
+					</div>
+
+					<div class="linha">
+						<button onclick="agruparValor('7')" class="botoes-brancos">7</button>
+						<button onclick="agruparValor('8')" class="botoes-brancos">8</button>
+						<button onclick="agruparValor('9')" class="botoes-brancos">9</button>
+						<button onclick="conferirOperacao('x', document.getElementById('resultado').value)" class="botoes-laranjas">x</button>
+					</div>
+
+					<div class="linha">
+						<button onclick="agruparValor('4')" class="botoes-brancos">4</button>
+						<button onclick="agruparValor('5')" class="botoes-brancos">5</button>
+						<button onclick="agruparValor('6')" class="botoes-brancos">6</button>
+						<button onclick="conferirOperacao('-', document.getElementById('resultado').value)" class="botoes-laranjas">-</button>
+					</div>
+
+					<div class="linha">
+						<button onclick="agruparValor('1')" class="botoes-brancos">1</button>
+						<button onclick="agruparValor('2')" class="botoes-brancos">2</button>
+						<button onclick="agruparValor('3')" class="botoes-brancos">3</button>
+						<button onclick="conferirOperacao('+', document.getElementById('resultado').value)" class="botoes-laranjas">+</button>
+					</div>
+
+					<div class="linha">
+						<button onclick="agruparValor('0')" id="botao-zero">0</button>
+						<button onclick="agruparValor('.')" class="botoes-brancos">.</button>
+						<button onclick="conferirOperacao('=', document.getElementById('calculo').innerText)" id="botao-calcular">=</button>
+					</div>					
+				</div>
+
+				<div id="rodape">
+					<div id="botoes">
+						<img id="voltar" src="imagens/voltar.png" width="20px">
+						<img id="home" src="imagens/home.png" width="20px">
+						<img id="hamburguer" src="imagens/hamburguer.jpg" width="19px">
+					</div>
+				</div>
+			</div>
+			<script src="js/script2.js"></script>
+		</div>
+
+	</body>
+</html>
