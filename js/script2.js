@@ -7,13 +7,15 @@ const addZero = (i) => {
 }
 
 // Pegando a data atual
-let data = new Date();
-let horas = addZero(data.getHours());
-let minutos = addZero(data.getMinutes());
+setInterval(() => {
+	let data = new Date();
+	let horas = addZero(data.getHours());
+	let minutos = addZero(data.getMinutes());
 
-//Colocando o horario na tag html
-let campoHorario = document.getElementById("horario");
-campoHorario.innerHTML = horas + ":" + minutos;
+	//Colocando o horario na tag html
+	let campoHorario = document.getElementById("horario");
+	campoHorario.innerHTML = horas + ":" + minutos;
+}, 100);
 
 //Função que mostra os valores que o usuário digitar
 const agruparValor = (valor) => {
